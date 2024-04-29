@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+   box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* 헤더 */
+
+/* GRID */
+
+.three {
+    width: 60px;
+    background-color: #4b6587;
+    height: 60px;
+    box-sizing: border-box;
+    padding-top: 20px;
+   
+}
+
+
+/* COLUMNS */
+
+.col {
+    display: block;
+    float: left;
+
+    margin: 0 0 1% 1.6%;
+}
+
+.col:first-of-type {
+    margin-left: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+
+/* ALL */
+
+.row .three {
+    padding: 80px 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+
+}
+
+.hamtol {
+    width: 50px;
+    height: 70px;
+
+}
+
+.hamburger .line {
+    width: 20px;
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 4px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+/* ONE */
+
+#hamburger-1.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(5px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+
+#MAIN_NAV{
+    display: flex; 
+    display: none;
+    
+
+    li{
+        display: flex;
+        align-items: center;
+        margin: 15px;
+    }
+}
+
+.Nav_a{
+    color: #1b1b1b;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.Nav_a:hover{
+        color: #A263C1;
+        transition: all 0.2s;
+}
+
+#MAIN_Tag{
+
+   margin: 0 0 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    p{
+        color: #1b1b1b;
+    font-size: 1rem;
+    font-weight: 900;
+    
+    }
+}
+
+#TOP{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0e5cf;
+    font-size: calc(max(16px),0.8vw);
+    font-weight: 900;
+    text-align: center;
+    line-height: 53px;
+    margin-top: 5px;
+    position: absolute;
+    left: 96vw;
+    color: #4B6587;
+}
+
+#TOP:hover{
+    color: #fff;
+    background-color: #4B6587;
+    transition: all 0.5s;
+    
+}
+
+/* 메인 페이지 */
+
+#main_page{
+    width: 100%;
+    height: 893px;
+    padding-top: 60px;
+    background-image: linear-gradient(to top, #A263C1 20%, #173A66 80%);
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+  }
+  
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 893px;
+  }
+
+#main_text_box{
+    width: 1300px;
+    height: 593px;
+    margin: 100px auto 0;
+
+    h1{
+        color: #fff;
+        font-size: calc(max(40px,4vw));
+        letter-spacing: -3px;
+        font-family: 'Cafe24Ssurround';
+        padding-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    p{
+        margin-top: 30px;
+        font-size: calc(max(16px,1vw));
+        color: #fff;
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+}
+
+#CON_btn{
+    width: 230px;
+    padding: 10px;
+    display: block;
+    border: 3px solid #fff;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.2s;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#CON_btn:hover{
+background-color: #fff;
+color: #1b1b1b;
+transition: all 0.5s;
+cursor: pointer;
+}
+
+#wave{
+    position: relative;
+}
+
+.waveTop,.wavemid,.wavebottom{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wave_top{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/waveTop.png);
+    background-size: 50% 200px;
+    z-index: 10;
+    background-repeat: repeat-x;
+    animation: waveAnimationTop 14s linear infinite;
+    opacity: 0.6;
+}   
+
+.wave_mid{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/waveMid.png);
+    background-size: 50% 200px;
+    z-index: 10;
+    animation: waveAnimationBot 0s linear infinite;
+    opacity: 1;
+}
+.wave_bot{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/waveBot.png);
+    background-size: 50% 200px;
+    z-index: 10;
+    background-repeat: repeat-x;
+    animation: waveAnimationBot 36s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes waveAnimationTop {
+    from { background-position: 0 0; }
+    to { background-position: -100% 0; }
+}
+
+@keyframes waveAnimationMid {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+@keyframes waveAnimationBot {
+    from { background-position: 0 0; }
+    to { background-position: -100% 0; }
+}
+
+
+/*  RESUME */
+
+#RESUME_box{
+    width: 100%;
+    height: 950px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#RESUME_Tag{
+    width: 1300px;
+    height: 950px;
+    margin: 0 auto;
+
+    h2{
+        font-size: 48px;
+       padding-top: 60px;
+        color: #fff;
+        -webkit-text-stroke: 3px #4b6587;
+        font-family: 'Cafe24Ssurround';
+        font-weight: 900;
+        box-sizing: border-box;
+        padding-bottom: 30px;
+        background: linear-gradient(to top, #ffe680 35%, transparent 20%);
+        margin-bottom: 60px;
+        opacity: 0;
+        transition: opacity 0.5s, transform 1s;
+        transform: translateX(-100%);
+    }
+ 
+}
+
+#RESUME_list{
+   display: flex;
+ 
+
+}
+
+
+/* 경험 교육 박스 */
+
+#EX_ED{
+    width: 650px;
+    height: 710px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s, transform 1s;
+    transform: translateX(-100%);
+  
+}
+
+#EXPERIENCE{
+    width: 650px;
+    height: 350px;
+    margin-bottom: 40px;
+}
+
+#EDUCATION{
+    width: 650px;
+    height: 250px;
+}
+
+.E_Name{
+    width: 100%;
+    font-size: 29px;
+    border-bottom: 2px solid #1b1b1b;
+    color: #4b6587;
+    font-family: 'Cafe24Ssurround';
+}
+
+.E_U_Li{
+    margin: 20px 0;
+}
+
+.E_U_Li p strong{
+    position: relative;
+    font-weight: 900;
+    
+    
+}
+
+.E_U_Li p strong::before{
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    top: 6px;
+    left: -20px;
+    border: 1px solid #1b1b1b;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+
+.E_U_Li p strong::after{
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    height: 95px;
+    top: 20px;
+    left: -13.5px;
+    border-left: 1px solid #1b1b1b;
+}
+
+.E_U_Li p strong::after:last-child{
+    border-left: 0px solid #1b1b1b;
+}
+
+
+/* 스킬 박스 */
+
+#SKILL{
+    width: 650px;
+    height: 700px;
+    margin-left: 40px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 0.5s, transform 1s;
+}
+
+#SKILL_list{
+    width: 650px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+.skill {
+    width: 45%;
+    height: 180px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #333;
+}
+
+.skill svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.skill circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 565.48; /* 약 2 * π * 90 (반지름) */
+    stroke-dashoffset: 565.48;
+    transition: stroke-dashoffset 3s ease-out;
+    border-radius: 50%; /* SVG 요소에는 border-radius가 적용되지 않지만, 동그란 모양을 유지하기 위해 여기에 기재 */
+}
+
+.skill::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+   font-size: 22px;
+    color: #A263C1;
+    font-weight: 900;
+    font-family: 'Cafe24Ssurround';
+}
+  
+
+
+/* WORKS*/
+
+#WORKS{
+    width: 100%;
+    height: 4000px;
+    background-color: #F7F6F2;
+
+}
+
+#WORKS_list{
+    width: 1300px;
+    margin: 0 auto;
+
+    h2{
+        font-size: 48px;
+       padding-top: 60px;
+        color: #fff;
+        -webkit-text-stroke: 3px #4b6587;
+        font-family: 'Cafe24Ssurround';
+        font-weight: 900;
+        box-sizing: border-box;
+        padding-bottom: 30px;
+        background: linear-gradient(to top, #ffe680 35%, transparent 20%);
+        margin-bottom: 60px;
+        opacity: 0;
+        transition: opacity 0.5s, transform 1s;
+        transform: translateX(-100%);
+    }
+}
