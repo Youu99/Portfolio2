@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: 'Pretendard Variable', 'Noto Sans KR', '돋움', Dotum, Tahoma, Geneva, sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a {
@@ -39,7 +39,7 @@ ul {
     height: 60px;
     box-sizing: border-box;
     padding-top: 20px;
-   
+
 }
 
 
@@ -140,54 +140,56 @@ header {
     display: flex;
     position: fixed;
     z-index: 1000;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.35);
 }
 
 
 
-#MAIN_NAV{
-    display: flex; 
+#MAIN_NAV {
+    display: flex;
     display: none;
-    
 
-    li{
+
+    li {
         display: flex;
         align-items: center;
         margin: 15px;
     }
 }
 
-.Nav_a{
+.Nav_a {
     color: #1b1b1b;
     font-size: 16px;
     font-weight: 800;
 }
 
-.Nav_a:hover{
-        color: #A263C1;
-        transition: all 0.2s;
+.Nav_a:hover {
+    color: #A263C1;
+    transition: all 0.2s;
 }
 
-#MAIN_Tag{
+#MAIN_Tag {
 
-   margin: 0 0 5px 10px;
+    margin: 0 0 5px 10px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    p{
+
+    p {
         color: #1b1b1b;
-    font-size: 1rem;
-    font-weight: 900;
-    
+        font-size: 1rem;
+        font-weight: 900;
+
     }
 }
 
-#TOP{
+#TOP {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #f0e5cf;
-    font-size: calc(max(16px),0.8vw);
+    font-size: calc(max(16px), 0.8vw);
     font-weight: 900;
     text-align: center;
     line-height: 53px;
@@ -197,16 +199,16 @@ header {
     color: #4B6587;
 }
 
-#TOP:hover{
+#TOP:hover {
     color: #fff;
     background-color: #4B6587;
     transition: all 0.5s;
-    
+
 }
 
 /* 메인 페이지 */
 
-#main_page{
+#main_page {
     width: 100%;
     height: 893px;
     padding-top: 60px;
@@ -216,34 +218,34 @@ header {
 canvas {
     display: block;
     vertical-align: bottom;
-  }
-  
-  
-  /* ---- particles.js container ---- */
-  
-  #particles-js {
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
     position: absolute;
     width: 100%;
     height: 893px;
-  }
+}
 
-#main_text_box{
+#main_text_box {
     width: 1300px;
     height: 593px;
     margin: 100px auto 0;
 
-    h1{
+    h1 {
         color: #fff;
-        font-size: calc(max(40px,4vw));
+        font-size: calc(max(40px, 4vw));
         letter-spacing: -3px;
         font-family: 'Cafe24Ssurround';
         padding-top: 70px;
         margin-bottom: 30px;
     }
 
-    p{
+    p {
         margin-top: 30px;
-        font-size: calc(max(16px,1vw));
+        font-size: calc(max(16px, 1vw));
         color: #fff;
         font-family: "Noto Sans KR", sans-serif;
         font-optical-sizing: auto;
@@ -253,7 +255,7 @@ canvas {
 
 }
 
-#CON_btn{
+#CON_btn {
     width: 230px;
     padding: 10px;
     display: block;
@@ -269,18 +271,20 @@ canvas {
     font-size: 20px;
 }
 
-#CON_btn:hover{
-background-color: #fff;
-color: #1b1b1b;
-transition: all 0.5s;
-cursor: pointer;
+#CON_btn:hover {
+    background-color: #fff;
+    color: #1b1b1b;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
-#wave{
+#wave {
     position: relative;
 }
 
-.waveTop,.wavemid,.wavebottom{
+.waveTop,
+.wavemid,
+.wavebottom {
     width: 100%;
     height: 200px;
     position: absolute;
@@ -288,7 +292,7 @@ cursor: pointer;
     left: 0;
 }
 
-.wave_top{
+.wave_top {
     width: 100%;
     height: 200px;
     background-image: url(../img/waveTop.png);
@@ -297,9 +301,9 @@ cursor: pointer;
     background-repeat: repeat-x;
     animation: waveAnimationTop 14s linear infinite;
     opacity: 0.6;
-}   
+}
 
-.wave_mid{
+.wave_mid {
     width: 100%;
     height: 200px;
     background-image: url(../img/waveMid.png);
@@ -308,7 +312,8 @@ cursor: pointer;
     animation: waveAnimationBot 0s linear infinite;
     opacity: 1;
 }
-.wave_bot{
+
+.wave_bot {
     width: 100%;
     height: 200px;
     background-image: url(../img/waveBot.png);
@@ -320,38 +325,53 @@ cursor: pointer;
 }
 
 @keyframes waveAnimationTop {
-    from { background-position: 0 0; }
-    to { background-position: -100% 0; }
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
 }
 
 @keyframes waveAnimationMid {
-    from { background-position: 0 0; }
-    to { background-position: 100% 0; }
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
 }
 
 @keyframes waveAnimationBot {
-    from { background-position: 0 0; }
-    to { background-position: -100% 0; }
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
 }
 
 
 /*  RESUME */
 
-#RESUME_box{
+#RESUME_box {
     width: 100%;
     height: 950px;
     background-color: #fff;
     overflow: hidden;
 }
 
-#RESUME_Tag{
+#RESUME_Tag {
     width: 1300px;
     height: 950px;
     margin: 0 auto;
 
-    h2{
+    h2 {
         font-size: 48px;
-       padding-top: 60px;
+        padding-top: 60px;
         color: #fff;
         -webkit-text-stroke: 3px #4b6587;
         font-family: 'Cafe24Ssurround';
@@ -364,19 +384,19 @@ cursor: pointer;
         transition: opacity 0.5s, transform 1s;
         transform: translateX(-100%);
     }
- 
+
 }
 
-#RESUME_list{
-   display: flex;
- 
+#RESUME_list {
+    display: flex;
+
 
 }
 
 
 /* 경험 교육 박스 */
 
-#EX_ED{
+#EX_ED {
     width: 650px;
     height: 710px;
     display: flex;
@@ -384,21 +404,21 @@ cursor: pointer;
     opacity: 0;
     transition: opacity 0.5s, transform 1s;
     transform: translateX(-100%);
-  
+
 }
 
-#EXPERIENCE{
+#EXPERIENCE {
     width: 650px;
     height: 350px;
     margin-bottom: 40px;
 }
 
-#EDUCATION{
+#EDUCATION {
     width: 650px;
     height: 250px;
 }
 
-.E_Name{
+.E_Name {
     width: 100%;
     font-size: 29px;
     border-bottom: 2px solid #1b1b1b;
@@ -406,18 +426,18 @@ cursor: pointer;
     font-family: 'Cafe24Ssurround';
 }
 
-.E_U_Li{
-    margin: 20px 0;
+.E_U_Li {
+    margin: 0 0 50px 0;
 }
 
-.E_U_Li p strong{
+.E_U_Li p strong {
     position: relative;
     font-weight: 900;
-    
-    
+
+
 }
 
-.E_U_Li p strong::before{
+.E_U_Li p strong::before {
     content: "";
     display: block;
     position: absolute;
@@ -433,7 +453,7 @@ cursor: pointer;
 
 
 
-.E_U_Li p strong::after{
+.E_U_Li p strong::after {
     content: "";
     display: block;
     position: absolute;
@@ -444,14 +464,14 @@ cursor: pointer;
     border-left: 1px solid #1b1b1b;
 }
 
-.E_U_Li p strong::after:last-child{
+.E_U_Li p strong::after:last-child {
     border-left: 0px solid #1b1b1b;
 }
 
 
 /* 스킬 박스 */
 
-#SKILL{
+#SKILL {
     width: 650px;
     height: 700px;
     margin-left: 40px;
@@ -460,14 +480,14 @@ cursor: pointer;
     transition: opacity 0.5s, transform 1s;
 }
 
-#SKILL_list{
+#SKILL_list {
     width: 650px;
     height: 640px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 
@@ -495,10 +515,12 @@ cursor: pointer;
 .skill circle {
     fill: none;
     stroke-width: 10;
-    stroke-dasharray: 565.48; /* 약 2 * π * 90 (반지름) */
+    stroke-dasharray: 565.48;
+    /* 약 2 * π * 90 (반지름) */
     stroke-dashoffset: 565.48;
     transition: stroke-dashoffset 3s ease-out;
-    border-radius: 50%; /* SVG 요소에는 border-radius가 적용되지 않지만, 동그란 모양을 유지하기 위해 여기에 기재 */
+    border-radius: 50%;
+    /* SVG 요소에는 border-radius가 적용되지 않지만, 동그란 모양을 유지하기 위해 여기에 기재 */
 }
 
 .skill::after {
@@ -508,30 +530,30 @@ cursor: pointer;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-   font-size: 22px;
+    font-size: 22px;
     color: #A263C1;
     font-weight: 900;
     font-family: 'Cafe24Ssurround';
 }
-  
+
 
 
 /* WORKS*/
 
-#WORKS{
+#WORKS {
     width: 100%;
-    height: 4000px;
+    height: 5500px;
     background-color: #F7F6F2;
 
 }
 
-#WORKS_list{
+#WORKS_list {
     width: 1300px;
     margin: 0 auto;
 
-    h2{
+    h2 {
         font-size: 48px;
-       padding-top: 60px;
+        padding-top: 60px;
         color: #fff;
         -webkit-text-stroke: 3px #4b6587;
         font-family: 'Cafe24Ssurround';
@@ -540,8 +562,341 @@ cursor: pointer;
         padding-bottom: 30px;
         background: linear-gradient(to top, #ffe680 35%, transparent 20%);
         margin-bottom: 60px;
-        opacity: 0;
-        transition: opacity 0.5s, transform 1s;
-        transform: translateX(-100%);
     }
+}
+
+#WOR_h2 {
+    transition: transform 1s ease-out, opacity 2s ease-out; /* 시간을 2초로 늘림 */
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.WORKS_list_TAB {
+    transition: transform 0.5s ease-out;
+    transform: translateY(100%);
+    opacity: 0;
+  height: 900px;
+   
+}
+
+#WOR_h2.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+  
+.WORKS_list_TAB.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.WORKS_list_box {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1B1B1B;
+    box-sizing: border-box;
+    
+
+}
+
+#WORKS .WORKS_list_box .WORKS_tag {
+    width: 80%;
+    box-sizing: border-box;
+    color: #4B6587;
+    font-size: calc(max(25px, 1.5vw));
+    font-family: 'Cafe24Ssurround';
+
+}
+
+.Details {
+
+    padding: 8px;
+    border: 3px solid #1b1b1b;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.2s;
+    width: 100px;
+    color: #1B1B1B;
+}
+
+
+.Details:hover {
+    background-color: #A263C1;
+    color: #fff;
+}
+
+
+
+/* 프로젝트 소개 */
+
+.WOR_u {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.WOR_l {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.WOR_PC {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 40px 0px 0 100px;
+}
+
+.WOR_PC2 {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 40px 0px 0 160px;
+}
+
+
+
+.WOR_PRJ {
+    width: 87.5%;
+    height: 72%;
+    top: 1.5%;
+    left: 0.4%;
+
+
+}
+
+.WOR_PRJimg {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 90%;
+    }
+}
+
+.WOR_PRJ {
+    position: absolute;
+    overflow: hidden;
+    margin: 3px 38px;
+
+    img {
+        width: 99.9%;
+        top: 0;
+        left: 0;
+        border-radius: 0px;
+    }
+}
+
+.WOR_text_box {
+    width: 100%;
+    margin: 80px 120px 0 0;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+        width: 100%;
+        display: inline-block;
+        background: linear-gradient(to top, #ffe680 50%, transparent 20%);
+        font-size: calc(max(20px, 1.2vw));
+        margin-bottom: 10px;
+    }
+
+    span {
+        color: #757575;
+        font-size: 19px;
+    }
+
+    b{
+        color: #af30ee;
+        font-size: 21px;
+        font-weight: 800;
+    }
+}
+
+.WOR_a_tag{
+    padding: 12px;
+    border: 3px solid #1b1b1b;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.2s;
+    width: 200px;
+    color: #1B1B1B;
+    text-align: center;
+    margin:30px auto 0;
+    font-size: 19px;
+}
+
+.WOR_a_tag:hover{
+    background-color: #A263C1;
+    color: #fff;
+
+}
+
+
+/* ABOUT ME */
+
+#ABOUT_ME{
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+}
+
+#ABOUT_ME_list{
+    width: 1300px;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 48px;
+        padding-top: 60px;
+        color: #fff;
+        -webkit-text-stroke: 3px #4b6587;
+        font-family: 'Cafe24Ssurround';
+        font-weight: 900;
+        box-sizing: border-box;
+        padding-bottom: 30px;
+        background: linear-gradient(to top, #ffe680 35%, transparent 20%);
+        margin-bottom: 60px;
+      
+    }
+}
+
+#ABOUT_box{
+    margin-top: 100px;
+    display: flex;
+
+}
+
+.ABOUT_list{
+    width: 50%;
+   padding-left: 10px;
+  
+}
+
+/* 초기 상태 */
+.ABOUT_h2-anim, .ABOUT_list-anim {
+    opacity: 0;
+    transition: all 2s;
+  }
+  
+  /* 활성화 상태 */
+  .ABOUT_h2-anim.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .ABOUT_list-anim.active.from-left {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .ABOUT_list-anim.active.from-right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* 왼쪽에서 오른쪽 */
+  .ABOUT_list-anim.from-left {
+    transform: translateX(-100%);
+  }
+  
+  /* 오른쪽에서 왼쪽 */
+  .ABOUT_list-anim.from-right {
+    transform: translateX(100%);
+  }
+
+#ABOUT_h3{
+    
+    margin-bottom: 3vw;
+    color: #4B6587;
+    font-size: calc(max(25px,1.5vw));
+    font-family: 'Cafe24Ssurround';
+    line-height: 40px;
+}
+
+#ABOUT_p{
+    color: #4B6587;
+    margin-top: 2vw;
+    font-size: calc(max(16px,1vw));
+    font-family: 'Pretendard Variable', 'Noto Sans KR', '돋움', Dotum, Tahoma, Geneva, sans-serif;
+
+}
+
+.ABOUT_box_tab{
+    display: flex;
+    align-items: center;
+}
+
+#ABOUT_u{
+    display: flex;
+    flex-direction: column;
+
+    li{
+        margin: 15px 0;
+    }
+}
+
+.fa-circle-check{
+    font-size: calc(max(45px,3vw));
+}
+
+.ABOUT_box_tab_list{
+    width: 100%;
+    height: 180px;
+    margin-left: 1vw;
+    padding: 20px;
+    border: 1px solid #1B1B1B;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 400;
+
+    h4{
+        margin-bottom: 15px;
+        border-bottom: 1px solid #1B1B1B;
+        box-sizing: border-box;
+        font-size: calc(max(20px,1.2vw));
+    }
+}
+
+/* CONTACT */
+
+#CONTACT{
+    width: 100%;
+    height: 900px;
+    background-color: #F7F6F2;
+}
+
+#CONTACT_box{
+    width: 1300px;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+#CONTACT_h2{
+    font-size: 48px;
+    padding-top: 60px;
+    color: #fff;
+    -webkit-text-stroke: 3px #4b6587;
+    font-family: 'Cafe24Ssurround';
+    font-weight: 900;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    background: linear-gradient(to top, #ffe680 30%, transparent 20%);
+    text-align: center;
+    margin-top: 50px;
 }

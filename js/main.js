@@ -195,18 +195,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // WORKS 스크롤 애니메이션
-  
-document.addEventListener('scroll', function() {
-  let scrollPosition = window.scrollY;
+document.addEventListener("DOMContentLoaded", function() {
+  const h2 = document.querySelector('#WOR_h2');
+  const tabs = document.querySelectorAll('.WORKS_list_TAB');
 
-  // #RES_h2 태그 애니메이션 처리
-  if (scrollPosition > 100) { 
-    document.querySelector('#WOR_h2').style.opacity = 1;
-    document.querySelector('#WOR_h2').style.transform = 'translateX(0)';
-  } else {
-    document.querySelector('#WOR_h2').style.opacity = 0;
-    document.querySelector('#WOR_h2').style.transform = 'translateX(-100%)';
-  }
+  // 스크롤 이벤트 리스너 등록
+  window.addEventListener('scroll', () => {
+    // h2 태그 애니메이션 조건 검사 및 적용
+    if (window.scrollY > h2.offsetTop - window.innerHeight / 2) {
+      h2.classList.add('active');
+    } else {
+      h2.classList.remove('active');
+    }
+
+    // 각 WORKS_list_TAB에 대한 애니메이션 조건 검사 및 적용
+    tabs.forEach((tab, index) => {
+      if (window.scrollY > tab.offsetTop - window.innerHeight / 2) {
+        tab.classList.add('active');
+      } else if (window.scrollY < tab.offsetTop - window.innerHeight) {
+        tab.classList.remove('active');
+      }
+    });
+  });
+});
 
 
+// ABOUT 스크롤
+
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  }, {threshold: 0.1});
+
+  // h2 애니메이션 적용
+  const h2 = document.querySelector("#ABOUT_h2");
+  h2.classList.add("ABOUT_h2-anim");
+  observer.observe(h2);
+
+  // 첫 번째 ABOUT_list 왼쪽에서 오른쪽으로
+  const firstList = document.querySelectorAll(".ABOUT_list")[0];
+  firstList.classList.add("ABOUT_list-anim", "from-left");
+  observer.observe(firstList);
+
+  // 두 번째 ABOUT_list 오른쪽에서 왼쪽으로
+  const secondList = document.querySelectorAll(".ABOUT_list")[1];
+  secondList.classList.add("ABOUT_list-anim", "from-right");
+  observer.observe(secondList);
 });
