@@ -195,6 +195,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // WORKS 스크롤 애니메이션
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const h2 = document.querySelector('#WOR_h2');
   const tabs = document.querySelectorAll('.WORKS_list_TAB');
@@ -217,34 +219,82 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+  
 });
+
 
 
 // ABOUT 스크롤
 
-document.addEventListener("DOMContentLoaded", function() {
-  const observer = new IntersectionObserver((entries) => {
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null, // viewport가 관찰 대상의 root
+    rootMargin: '0px',
+    threshold: 0.1 // 10% 요소가 보이면 callback 실행
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.classList.add("active");
+      if (entry.isIntersecting) {
+        entry.target.classList.add('enter');
       } else {
-        entry.target.classList.remove("active");
+        entry.target.classList.remove('enter');
       }
     });
-  }, {threshold: 0.1});
+  }, observerOptions);
 
-  // h2 애니메이션 적용
-  const h2 = document.querySelector("#ABOUT_h2");
-  h2.classList.add("ABOUT_h2-anim");
-  observer.observe(h2);
+  // 'ABOUT_h2' 요소에 대한 관찰자 등록
+  const aboutH2 = document.querySelector('#ABOUT_h2');
+  observer.observe(aboutH2);
+  aboutH2.classList.add('from-left');
 
-  // 첫 번째 ABOUT_list 왼쪽에서 오른쪽으로
-  const firstList = document.querySelectorAll(".ABOUT_list")[0];
-  firstList.classList.add("ABOUT_list-anim", "from-left");
-  observer.observe(firstList);
+  // 'ABOUT_list' 클래스를 가진 모든 요소에 대한 관찰자 등록
+  const aboutLists = document.querySelectorAll('.ABOUT_list');
+  aboutLists.forEach((el, index) => {
+    if (index % 2 === 0) { // 첫 번째 요소는 왼쪽에서
+      el.classList.add('from-left');
+    } else { // 두 번째 요소는 오른쪽에서
+      el.classList.add('from-right');
+    }
+    observer.observe(el);
+  });
+});
 
-  // 두 번째 ABOUT_list 오른쪽에서 왼쪽으로
-  const secondList = document.querySelectorAll(".ABOUT_list")[1];
-  secondList.classList.add("ABOUT_list-anim", "from-right");
-  observer.observe(secondList);
+
+
+
+
+
+// CONTACT 태그
+
+document.addEventListener('scroll', function() {
+  var contactH2 = document.getElementById('CONTACT_h2');
+  var contactH2Position = contactH2.getBoundingClientRect().top;
+  var screenPosition = window.innerHeight;
+
+  // 스크롤 내릴 때
+  if (contactH2Position < screenPosition) {
+    contactH2.style.opacity = '1';
+    contactH2.style.transform = 'translateY(0)';
+  } else {
+    // 스크롤 올릴 때
+    contactH2.style.opacity = '0';
+    contactH2.style.transform = 'translateY(20px)';
+  }
+});
+
+
+// A 태그 자연스럽게 이동하는 이벤트
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault(); // 기본 앵커 이동 방지
+
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) { // 대상 요소가 존재하는지 확인
+      window.scrollTo({ // 스크롤 이동
+        top: target.offsetTop, // 대상 요소의 상단 위치
+        behavior: 'smooth' // 부드러운 스크롤 효과 적용
+      });
+    }
+  });
 });
