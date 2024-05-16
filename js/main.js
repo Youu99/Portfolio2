@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // 스크롤 이벤트 리스너 등록
   window.addEventListener('scroll', () => {
     // h2 태그 애니메이션 조건 검사 및 적용
-    if (window.scrollY > h2.offsetTop - window.innerHeight / 2) {
+    if (window.scrollY > h2.offsetTop - window.innerHeight / 1.2) {
       h2.classList.add('active');
     } else {
       h2.classList.remove('active');
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 각 WORKS_list_TAB에 대한 애니메이션 조건 검사 및 적용
     tabs.forEach((tab, index) => {
-      if (window.scrollY > tab.offsetTop - window.innerHeight / 2) {
+      if (window.scrollY > tab.offsetTop - window.innerHeight / 1.2) {
         tab.classList.add('active');
       } else if (window.scrollY < tab.offsetTop - window.innerHeight) {
         tab.classList.remove('active');
