@@ -766,81 +766,104 @@ canvas {
 
 
 /* 프로젝트 소개 팝업창 */
+.no-scroll {
+    overflow: hidden !important;
+  }
 
-.WORKS_Det{
+.WORKS_Det {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #fff;
+    z-index: 100;
     display: none;
+   
 }
 
-.WORKS_POP{
+.Det_btn {
+    position: absolute;
+    top: 90px;
+    left: 95%;
+}
+
+.Det_btn .fa-xmark {
+    font-size: 30px;
+    color: #A263C1;
+    cursor: pointer;
+}
+
+.WORKS_POP {
     display: flex;
-
+    height: 100%; /* 부모 컨테이너 높이 설정 */
 }
 
-.WORKS_POP_list1,.WORKS_POP_list2{
+.WORKS_POP_list1, .WORKS_POP_list2 {
     width: 50%;
-    
-    img{
-        width: 100%;
-    }
 }
 
-.WORKS_POP_list2{
+.WORKS_POP_list1 {
+    overflow-y: auto; /* 세로 스크롤 가능 */
+    height: 100%; /* 높이 설정 */
+}
+
+.WORKS_POP_list1 img {
+    width: 100%;
+    padding-top: 60px;
+}
+
+.WORKS_POP_list2 {
     padding: 100px 0 0 50px;
-
-    h2{
-        color: #4B6587;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-
-    h3{
-        color: #4B6587;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
-
-    p{
-        color: black;
-        font-weight: 600;
-        line-height: 32px;
-    }
-
-    span{
-        color:#A263C1;
-        font-weight: 700;
-    }
+    overflow-y:hidden;
 }
 
-.produce_skill{
+.WORKS_POP_list2 h2 {
+    color: #4B6587;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.WORKS_POP_list2 h3 {
+    color: #4B6587;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.WORKS_POP_list2 p {
+    color: black;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.WORKS_POP_list2 span {
+    color: #A263C1;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.produce_skill {
     margin-top: 15px;
 }
 
-.WORKS_main_color{
+.WORKS_main_color {
     display: flex;
     width: 50%;
     height: 20px;
-    margin: 20px 0 0px 0;
+    margin: 20px 0 0 0;
     position: relative;
 }
 
-
-.WORKS_main_color1{
+.WORKS_main_color1 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: #4B6587;
     display: inline-block;
     position: absolute;
-   
 }
 
-.WORKS_main_color2{
+.WORKS_main_color2 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -849,6 +872,21 @@ canvas {
     position: absolute;
     left: 8px;
 }
+
+.WORKS_Det .swiper-button-next{
+    position: fixed;
+    top: 500px;
+    left: 750px;
+    color: #af30ee;
+}
+
+.WORKS_Det .swiper-button-prev{
+    position: fixed;
+    top: 500px;
+    left: 50px;
+    color: #af30ee;
+}
+
 
 
 

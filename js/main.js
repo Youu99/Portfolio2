@@ -298,3 +298,74 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+// 팝업창 슬라이드
+
+var swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// 팝업창 이미지 스크롤
+
+document.addEventListener('DOMContentLoaded', function() {
+  // .WORKS_POP_list1 내의 첫 번째 이미지 선택
+  var img = document.querySelector('.WORKS_POP_list1 img');
+  if (img) {
+      // 이미지가 로드되면 실행
+      img.onload = function() {
+          // 이미지의 높이를 가져옴
+          var imgHeight = img.offsetHeight;
+          // .WORKS_POP_list1의 높이를 이미지 높이로 설정
+          var list1 = document.querySelector('.WORKS_POP_list1');
+          if (list1) {
+              list1.style.height = imgHeight + 'px'; // padding-top 값을 고려해야 할 수 있음
+          }
+      };
+      // 이미지가 이미 로드된 경우를 대비하여 수동으로 onload 이벤트를 트리거
+      if (img.complete) {
+        img.onload();
+      }
+  }
+});
+
+// 팝업창 연결
+
+document.addEventListener('DOMContentLoaded', function() {
+  // 'Details' 링크에 대한 클릭 이벤트 리스너 설정
+  document.querySelectorAll('.Details').forEach(function(detailLink) {
+    detailLink.addEventListener('click', function(e) {
+      e.preventDefault(); // 기본 동작 방지
+      var targetId = this.getAttribute('data-target'); // data-target 속성 값 가져오기
+      var targetDiv = document.querySelector('.WORKS_Det#work' + targetId); // 대상 div 선택
+
+      // 모든 WORKS_Det 숨기기
+      document.querySelectorAll('.WORKS_Det').forEach(function(div) {
+        div.style.display = 'none';
+      });
+
+      // 선택한 WORKS_Det 보이기
+      if(targetDiv) {
+        targetDiv.style.display = 'block';
+        // body 스크롤 숨기기
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  // 모든 '닫기' 버튼에 대한 클릭 이벤트 리스너 설정
+  document.querySelectorAll('.Det_btn').forEach(function(closeButton) {
+    closeButton.addEventListener('click', function() {
+      // 모든 WORKS_Det 숨기기
+      document.querySelectorAll('.WORKS_Det').forEach(function(div) {
+        div.style.display = 'none';
+      });
+
+      // body 스크롤 다시 보이게 하기
+      document.body.style.overflow = '';
+    });
+  });
+});
