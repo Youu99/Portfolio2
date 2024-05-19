@@ -766,9 +766,7 @@ canvas {
 
 
 /* 프로젝트 소개 팝업창 */
-.no-scroll {
-    overflow: hidden !important;
-  }
+
 
 .WORKS_Det {
     width: 100%;
@@ -806,7 +804,23 @@ canvas {
 .WORKS_POP_list1 {
     overflow-y: auto; /* 세로 스크롤 가능 */
     height: 100%; /* 높이 설정 */
+    position: relative;
 }
+
+.WORKS_Det .WORKS_POP_list1 .swiper-button-next{
+    position: fixed;
+    top: 500px;
+    left: 44vw;
+    color: #af30ee;
+}
+
+.WORKS_Det .WORKS_POP_list1 .swiper-button-prev{
+    position: fixed;
+    top: 500px;
+    left: 50px;
+    color: #af30ee;
+}
+
 
 .WORKS_POP_list1 img {
     width: 100%;
@@ -873,19 +887,6 @@ canvas {
     left: 8px;
 }
 
-.WORKS_Det .swiper-button-next{
-    position: fixed;
-    top: 500px;
-    left: 750px;
-    color: #af30ee;
-}
-
-.WORKS_Det .swiper-button-prev{
-    position: fixed;
-    top: 500px;
-    left: 50px;
-    color: #af30ee;
-}
 
 
 

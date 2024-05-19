@@ -311,26 +311,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // 팝업창 이미지 스크롤
 
-document.addEventListener('DOMContentLoaded', function() {
-  // .WORKS_POP_list1 내의 첫 번째 이미지 선택
-  var img = document.querySelector('.WORKS_POP_list1 img');
-  if (img) {
-      // 이미지가 로드되면 실행
-      img.onload = function() {
-          // 이미지의 높이를 가져옴
-          var imgHeight = img.offsetHeight;
-          // .WORKS_POP_list1의 높이를 이미지 높이로 설정
-          var list1 = document.querySelector('.WORKS_POP_list1');
-          if (list1) {
-              list1.style.height = imgHeight + 'px'; // padding-top 값을 고려해야 할 수 있음
-          }
-      };
-      // 이미지가 이미 로드된 경우를 대비하여 수동으로 onload 이벤트를 트리거
-      if (img.complete) {
-        img.onload();
-      }
-  }
-});
+
 
 // 팝업창 연결
 
