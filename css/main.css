@@ -973,7 +973,7 @@ canvas {
     margin-top: 2vw;
     font-size: calc(max(16px,1vw));
     font-family: 'Pretendard Variable', 'Noto Sans KR', '돋움', Dotum, Tahoma, Geneva, sans-serif;
-
+    line-height: 27px;
 }
 
 .ABOUT_box_tab{
