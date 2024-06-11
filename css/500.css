@@ -251,7 +251,7 @@
   
     h1 {
         color: #fff;
-        font-size: 64px;
+        font-size: 58px;
         letter-spacing: -3px;
         font-family: 'Cafe24Ssurround';
         padding-top: 70px;
@@ -375,7 +375,7 @@
   
   #RESUME_box {
     width: 100%;
-    height: 250vh;
+    height: 280vh;
     background-color: #fff;
     overflow: hidden;
   }
@@ -386,7 +386,7 @@
     margin: 0 auto;
   
     h2 {
-        font-size: 48px;
+        font-size: 40px;
         padding-top: 60px;
         color: #fff;
         -webkit-text-stroke: 3px #4b6587;
@@ -569,7 +569,7 @@
     margin: 0 auto;
   
     h2 {
-        font-size: 48px;
+        font-size: 40px;
         padding-top: 60px;
         color: #fff;
         -webkit-text-stroke: 3px #4b6587;
@@ -901,7 +901,7 @@
   
   #ABOUT_ME{
     width: 100%;
-    height: 140vh;
+    height: 170vh;
     overflow: hidden;
   }
   
@@ -910,7 +910,7 @@
     margin: 0 auto;
   
     h2 {
-        font-size: 48px;
+        font-size: 40px;
         padding-top: 60px;
         color: #fff;
         -webkit-text-stroke: 3px #4b6587;
@@ -1053,7 +1053,7 @@
   }
   
   #CONTACT_h2{
-    font-size: 48px;
+    font-size: 40px;
     padding-top: 60px;
     color: #fff;
     -webkit-text-stroke: 3px #4b6587;
@@ -1084,7 +1084,7 @@
     color: #A263C1;
     font-weight: 700;
     font-family: 'Cafe24Ssurround';
-    font-size: 24px;
+    font-size: 20px;
     line-height: 70px;
   }
   }
@@ -1124,7 +1124,7 @@
     display: flex   ;
   }
   
-  #mail_p{
+  #mail_p,#mail_g{
     font-size: 19px;
     color: #707070;
     display: flex;
@@ -1136,4 +1136,23 @@
     cursor: pointer;
   }
   
+  #CONTACT_git{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
   }
+
+  #mail_g:hover{
+    color: #A263C1;
+    cursor: pointer;
+  }
+
+  .fa-square-github{
+    font-size: 55px;
+    color: #707070;
+    margin-right: 20px;
+  }
+
+  }
+

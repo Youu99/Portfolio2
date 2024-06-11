@@ -1109,4 +1109,22 @@ span{
   cursor: pointer;
 }
 
+#CONTACT_git{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  align-items: center;
+}
+
+#mail_g:hover{
+  color: #A263C1;
+  cursor: pointer;
+}
+
+.fa-square-github{
+  font-size: 55px;
+  color: #707070;
+  margin-right: 20px;
+}
+
 }
