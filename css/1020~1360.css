@@ -548,6 +548,20 @@ canvas {
 
 }
 
+#ABOUT_img{
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-right: 100px;
+  margin: 0 0 50px 0;
+  img{
+    width: 250px;
+    border-radius: 100px;
+    
+  }
+}
+
 #WORKS_list {
   width: 90%;
   margin: 0 auto;

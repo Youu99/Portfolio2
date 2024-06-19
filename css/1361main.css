@@ -888,6 +888,20 @@ height: 900px;
   overflow: hidden;
 }
 
+#ABOUT_img{
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-right: 200px;
+  margin: 0 0 50px 0;
+  img{
+    width: 250px;
+    border-radius: 100px;
+    
+  }
+}
+
 #ABOUT_ME_list{
   width: 1300px;
   margin: 0 auto;

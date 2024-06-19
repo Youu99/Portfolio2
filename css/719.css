@@ -563,6 +563,8 @@
     background-color: #F7F6F2;
   
   }
+
+  
   
   #WORKS_list {
     width: 90%;
@@ -901,8 +903,22 @@
   
   #ABOUT_ME{
     width: 100%;
-    height: 130vh;
+    height: 180vh;
     overflow: hidden;
+  }
+
+  #ABOUT_img{
+  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-right: 0px;
+    margin: 0 0 50px 0;
+    img{
+      width: 250px;
+      border-radius: 100px;
+      
+    }
   }
   
   #ABOUT_ME_list{
